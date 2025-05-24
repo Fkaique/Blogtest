@@ -23,7 +23,8 @@ jobs:
             - name: install dependences
               run: pnpm i
             - name: build
-              run: 'pnpm docs:build'
+              run: 'pnpm docs:build --base /Blogtest/'
+
             
             - name: Upload artifacts to GitHub Pages
               uses: actions/upload-pages-artifact@v3
@@ -32,3 +33,4 @@ jobs:
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
+
